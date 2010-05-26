@@ -17,7 +17,7 @@ public class CommandModule extends AbstractModule {
     protected void configure() {
         MapBinder<String, ICommand> mapBinder =
                 MapBinder.newMapBinder(binder(), String.class, ICommand.class);
-        mapBinder.addBinding("1").to(CommandOne.class);
-        mapBinder.addBinding("2").to(CommandTwo.class);
+        mapBinder.addBinding(Event.ONE).to(CommandOne.class);
+        mapBinder.addBinding(Event.TWO).to(CommandTwo.class);
     }
 }

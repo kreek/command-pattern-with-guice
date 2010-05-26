@@ -20,8 +20,8 @@ public class CommandMap {
         this.commands = commands;
     }
 
-    public void routeEventToCommand(String type) {
-        ICommand command = commands.get(type);
+    public void dispatchEvent(IEvent e) {
+        ICommand command = commands.get(e.getType());
         command.execute();
     }
 }

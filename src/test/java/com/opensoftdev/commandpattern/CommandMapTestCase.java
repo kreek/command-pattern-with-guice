@@ -17,10 +17,10 @@ public class CommandMapTestCase extends TestCase {
     }
 
     public void test_createOne() {
-        this.commandMap.routeEventToCommand("1");
+        this.commandMap.dispatchEvent(new Event(Event.ONE, 1));
     }
 
     public void test_createTwo() {
-        this.commandMap.routeEventToCommand("2");
+        this.commandMap.dispatchEvent(new Event(Event.TWO, 2));
     }
 }
