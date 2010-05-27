@@ -17,6 +17,16 @@
             <artifactId>guice-multibindings</artifactId>
             <version>2.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.inject.extensions</groupId>
+            <artifactId>guice-assisted-inject</artifactId>
+            <version>2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>aopalliance</groupId>
+            <artifactId>aopalliance</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -38,6 +48,7 @@
             </plugin>
         </plugins>
     </build>
-    <name>CommandMap</name>
-    <artifactId>CommandMap</artifactId>
+    <name>GuiceCommandPattern</name>
+    <artifactId>GuiceCommandPattern</artifactId>
 </project>
+

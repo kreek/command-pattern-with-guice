@@ -13,15 +13,16 @@ import java.util.Map;
  * @author alastair
  */
 public class CommandMap {
-    private final Map<String, ICommand> commands;
+
+    private final Map<String, ICommandFactory> commands;
 
     @Inject
-    public CommandMap(Map<String, ICommand> commands) {
+    public CommandMap(Map<String, ICommandFactory> commands) {
         this.commands = commands;
     }
 
     public void dispatchEvent(IEvent e) {
-        ICommand command = commands.get(e.getType());
+        ICommand command = commands.get(e.getType()).create(e);
         command.execute();
     }
 }

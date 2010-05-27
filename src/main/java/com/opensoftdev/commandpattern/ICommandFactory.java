@@ -9,9 +9,6 @@ package com.opensoftdev.commandpattern;
  *
  * @author alastair
  */
-public class CommandTwo implements ICommand {
-    @Override
-    public void execute() {
-        System.out.println("execute two");
-    }
+public interface ICommandFactory {
+    ICommand create(IEvent event);
 }
